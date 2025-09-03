@@ -11,14 +11,25 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@excalidraw/excalidraw": "^0.17.0",
+    "@excalidraw/markdown-to-text": "^0.1.2",
+    "@excalidraw/mermaid-to-excalidraw": "^1.1.3",
     "@mantine/core": "^8.2.3",
     "@mantine/hooks": "^8.2.3",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "groq-sdk": "^0.31.0",
     "isbot": "^5.1.29",
+    "mermaid": "^11.10.1",
+    "nanoid": "^5.1.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.7.1"
+    "react-router": "^7.7.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "roughjs": "^4.6.6",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@react-router/dev": "^7.7.1",
