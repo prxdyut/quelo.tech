@@ -1,14 +1,15 @@
+// Get API keys from environment variables
+const getGroqApiKeys = (): string[] => {
+    const envKeys = import.meta.env.VITE_GROQ_API_KEYS;
+    if (!envKeys) {
+        console.warn('No GROQ API keys found in environment variables. Please set VITE_GROQ_API_KEYS in your .env file.');
+        return [];
+    }
+    return envKeys.split(',').map((key: string) => key.trim()).filter((key: string) => key.length > 0);
+};
+
 export const AI_CONFIG = {
-    GROQ_API_KEYS: [
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY",
-        "REDACTED_API_KEY"
-    ], // Add more keys as needed
+    GROQ_API_KEYS: getGroqApiKeys(),
     DANGEROUS_ALLOW_BROWSER: true,
     MODELS: {
         DEEPSEEK: "deepseek-r1-distill-llama-70b",
