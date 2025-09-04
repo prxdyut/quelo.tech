@@ -1,8 +1,7 @@
 import Groq from "groq-sdk";
-import { AI_CONFIG } from "../constants/whiteboard.ts";
+import { AI_CONFIG } from "../constants/whiteboard";
 import type { TopicAnalysis } from "~/types/whiteboard.js";
-import { blobToBase64, filterThinkTags, createFallbackMermaid, processMermaidCode } from "../utils/whiteboard.ts";
-import { convertJSONtoMermaidMindmap } from "../utils/diagrams.ts";
+import { blobToBase64, filterThinkTags, createFallbackMermaid, processMermaidCode } from "../utils/whiteboard";
 
 interface Diagram {
     type: string;
@@ -440,16 +439,11 @@ Definition, KeyConcepts, Formulas, Examples, RealLifeApplications, CrossDiscipli
                     {
                         role: "user",
                         content: `Provide a clear, comprehensive definition for the topic "${topic.title}".
-
 Context: ${topic.description}
-
 Instructions:
 - Start with a concise, precise definition
-- Explain the core concept in simple terms
-- Include key characteristics or features
-- Use analogies if helpful for understanding
-${HELPER_MERMAID_MARKDOWN}
-- Length: 150-300 words`
+- Do in minimum words possible.
+- Should be concise and clear.`
                     }
                 ],
                 model: AI_CONFIG.MODELS.GPTOSS,

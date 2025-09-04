@@ -243,7 +243,7 @@ export const parseMermaidFlowChartDiagram = (
   // diagram is parsed correctly. Useful when multiple diagrams are
   // parsed together one after another, eg in playground
   // https://github.com/mermaid-js/mermaid/blob/e561cbd3be2a93b8bedfa4839484966faad92ccf/packages/mermaid/src/Diagram.ts#L43
-  diagram.parse();
+  diagram.parser.parse(diagram.text);
 
   // Get mermaid parsed data from parser shared variable `yy`
   //@ts-ignore

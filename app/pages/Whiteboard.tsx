@@ -21,14 +21,13 @@ const Whiteboard: React.FC = () => {
 
     return (
         <div id="excalidraw">
-            <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', position: "absolute", bottom: "10px" }}>
                 <AnalyzeButton
                     onClick={analyzeFrame}
                     isProcessing={isProcessing}
                     isAPIReady={!!excalidrawAPI}
                 />
             </div>
-
             <ExcalidrawWrapper
                 mermaidDefinition={deferredMermaidData.definition}
                 mermaidOutput={deferredMermaidData.output}

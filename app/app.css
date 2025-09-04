@@ -1,7 +1,8 @@
-@import '@mantine/core/styles.css';
+@import "@mantine/core/styles.css";
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -113,4 +114,10 @@ summary {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.dropdown-menu-button.main-menu-trigger.zen-mode-transition,
+.layer-ui__wrapper__top-right.zen-mode-transition,
+.help-icon {
+  display: none !important;
 }

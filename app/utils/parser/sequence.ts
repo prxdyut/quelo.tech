@@ -467,7 +467,7 @@ export const parseMermaidSequenceDiagram = (
   diagram: Diagram,
   containerEl: Element
 ): Sequence => {
-  diagram.parse();
+  diagram.parser.parse(diagram.text);
 
   // Get mermaid parsed data from parser shared variable `yy`
   //@ts-ignore

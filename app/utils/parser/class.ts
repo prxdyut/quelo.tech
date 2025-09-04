@@ -416,7 +416,7 @@ export const parseMermaidClassDiagram = (
   diagram: Diagram,
   containerEl: Element
 ): Class => {
-  diagram.parse();
+  diagram.parser.parse(diagram.text);
   //@ts-ignore
   const mermaidParser = diagram.parser.yy;
   const direction = mermaidParser.getDirection();
